@@ -152,9 +152,8 @@ In this step, we will create two functions: `game_sprites` and `create_game_text
 #### Example Code for `game_sprites`
 
 ```c
+#include "my.h"
 #include "struct.h"
-#include <SFML/Graphics.h>
-#include <stdlib.h>
 
 sprites **game_sprites(void)
 {
@@ -185,9 +184,8 @@ sprites **game_sprites(void)
 #### Example Code for `create_game_text`
 
 ```c
+#include "my.h"
 #include "struct.h"
-#include <SFML/Graphics.h>
-#include <stdlib.h>
 
 text **create_game_text(void)
 {
@@ -201,3 +199,19 @@ text **create_game_text(void)
 }
 ```
 
+### Part 5: Displaying Sprites and Text
+
+In the `display.c` file, you will find two functions that handle the display of sprites and text on the window.
+
+#### 5.1: `display_sprite` Function
+The `display_sprite` function is designed to display a list of structs that contain sprites on the window.
+It takes an array of `sprites` pointers (`struc`), a pointer to the window structure (`wind_struct`), and a boolean parameter (`d`) indicating whether to clear and display the window.
+
+#### 5.2: `display_text` Function
+The `display_text` function is designed to display a list of structs that contain text on the window.
+It takes an array of `text` pointers (`struc`) and a pointer to the window structure (`wind_struct`).
+
+These functions are ready to use. Simply refer to the explanations to understand how to utilize them in your main program.
+
+### 5.3:
+Try to display some stuff in `settings` function that is in the settings.c
