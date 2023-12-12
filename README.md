@@ -83,7 +83,8 @@ sprites *create_object(const char *path_to_spritesheet,
     // Fill in the code here to initialize the sprite
 
     return obj;
-}```
+}
+```
 
 ### Part 3: Creating Text Objects
 
@@ -125,4 +126,5 @@ text *create_text(char *string, sfVector2f pos, int size, sfColor color)
     // Fill in the code here to initialize the text
 
     return obj;
-}```
+}
+```
