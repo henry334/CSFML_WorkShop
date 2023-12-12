@@ -128,3 +128,76 @@ text *create_text(char *string, sfVector2f pos, int size, sfColor color)
     return obj;
 }
 ```
+
+### Part 4: Creating Menu Sprites and Game Text
+
+In this step, we will create two functions: `game_sprites` and `create_game_text`  These functions will be responsible for initializing arrays of sprites and text objects using the previously defined `create_object` and `create_text` functions.
+
+#### Instructions
+
+#### 4.1: `_sprites` Function
+
+1. Open the `game_sprites.c` file.
+
+2. In `game_sprites.c`, you'll find a declaration for the `game_sprites` function with an empty body and an allocated array of sprite pointers using `malloc`. Your task is to fill in the function body to initialize the array with sprite objects.
+
+3. Initialize an array of pointers to `sprites` using `malloc`. Determine the length of the array (`len`) based on the number of sprites you want to create.
+
+4. Use the `create_object` function to create sprite objects and populate the array accordingly.
+
+5. Ensure to set the last element of the array to `NULL` to mark the end of the array.
+
+6. Return the array.
+
+#### Example Code for `game_sprites`
+
+```c
+#include "struct.h"
+#include <SFML/Graphics.h>
+#include <stdlib.h>
+
+sprites **game_sprites(void)
+{
+    int len = 2;
+    sprites **save = malloc(sizeof(*save) * len);
+
+    // Fill in the code here to create and populate sprite objects
+
+    save[len - 1] = NULL;
+    return save;
+}
+```
+
+### Part 4.2: Creating Game Text
+
+1. Open the `create_game_text.c` file.
+
+2. In `create_game_text.c`, you'll find a declaration for the `create_game_text` function with an empty body and an allocated array of text pointers using `malloc`. Your task is to fill in the function body to initialize the array with text objects.
+
+3. Initialize an array of pointers to `text` using `malloc`. Determine the length of the array (`len`) based on the number of text objects you want to create.
+
+4. Use the `create_text` function to create text objects and populate the array accordingly.
+
+5. Ensure to set the last element of the array to `NULL` to mark the end of the array.
+
+6. Return the array.
+
+#### Example Code for `create_game_text`
+
+```c
+#include "struct.h"
+#include <SFML/Graphics.h>
+#include <stdlib.h>
+
+text **create_game_text(void)
+{
+    int len = 2;
+    text **t = malloc(sizeof(*t) * len);
+
+    // Fill in the code here to create and populate text objects
+
+    t[len - 1] = NULL;
+    return t;
+}
+```
+
