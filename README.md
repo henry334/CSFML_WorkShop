@@ -214,15 +214,15 @@ It takes an array of `text` pointers (`struc`) and a pointer to the window struc
 These functions are ready to use. Simply refer to the explanations to understand how to utilize them in your main program.
 
 ### 5.3: 
-Try to display some stuff in the `settings` function that is in the settings.c
+Try to display some stuff in the `menu` function that is in the menu.c
 
-### Part 7: Handling Button Clicks
+### Part 6: Handling Button Clicks
 
 In this step, we will implement the `button_click` function in the `analyse_event.c` file. This function is responsible for checking if the mouse click corresponds to any button in a list of sprites. If a button is clicked, the function returns the position of the button in the list.
 
 #### Instructions
 
-0. Use the func `create_object` to create a list of sprites that will be use as buttons (pre build func in `settings.c`)
+0. Use the func `create_object` to create a list of sprites that will be use as buttons (pre build func in `menu.c`)
 
 1. Open the `analyse_event.c` file.
 
@@ -246,7 +246,6 @@ In this step, we will implement the `button_click` function in the `analyse_even
 
 ```c
 #include "struct.h"
-#include <SFML/Graphics.h>
 
 int button_click(wdw *wind_struct, sprites **ar, int start) {
     if (ar == NULL) {
@@ -261,3 +260,8 @@ int button_click(wdw *wind_struct, sprites **ar, int start) {
     return LOOP;
 }
 ```
+### Part 7: Create a Menu and Setting page
+
+#### Instructions
+
+1. With all those func you should now be able to build a Setting and Menu page you can use the #define CONTINUE 48 #define LOOP 49 #define EXIT 50 #define ERROR 89 that are in my.h as return code.
