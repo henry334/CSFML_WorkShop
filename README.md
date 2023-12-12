@@ -213,5 +213,51 @@ It takes an array of `text` pointers (`struc`) and a pointer to the window struc
 
 These functions are ready to use. Simply refer to the explanations to understand how to utilize them in your main program.
 
-### 5.3:
-Try to display some stuff in `settings` function that is in the settings.c
+### 5.3: 
+Try to display some stuff in the `settings` function that is in the settings.c
+
+### Part 7: Handling Button Clicks
+
+In this step, we will implement the `button_click` function in the `analyse_event.c` file. This function is responsible for checking if the mouse click corresponds to any button in a list of sprites. If a button is clicked, the function returns the position of the button in the list.
+
+#### Instructions
+
+0. Use the func `create_object` to create a list of sprites that will be use as buttons (pre build func in `settings.c`)
+
+1. Open the `analyse_event.c` file.
+
+2. You'll find a declaration for the `button_click` function with an empty body and a provided code structure. Your task is to fill in the condition inside the for loop to check if the mouse position is on a button.
+
+3. The function takes a window structure pointer (`wind_struct`), an array of sprites pointers (`ar`), and a starting index (`start`).
+
+4. Check if `ar` is not NULL. If it is NULL, return `LOOP` to indicate that no button was clicked.
+
+5. Retrieve the mouse button, x-coordinate, and y-coordinate from the window structure.
+
+6. Iterate through the array of sprites starting from the given index (`start`).
+
+7. Inside the loop, add the condition that checks if the mouse position is on the current button. If true, return the position of the button in the list (`c`).
+
+8. If no button is clicked, return `LOOP`.
+
+9. CLICK on a button `event` function should return you the index of the sprite in the array
+
+#### Example Code for `button_click`
+
+```c
+#include "struct.h"
+#include <SFML/Graphics.h>
+
+int button_click(wdw *wind_struct, sprites **ar, int start) {
+    if (ar == NULL) {
+        return LOOP;
+    }
+    int k = wind_struct->event.mouseButton.button;
+    int x = wind_struct->event.mouseButton.x;
+    int y = wind_struct->event.mouseButton.y;
+    for (int c = start; ar[c] != NULL; c++) {
+        // Fill in the condition to check if a button is clicked
+    }
+    return LOOP;
+}
+```
