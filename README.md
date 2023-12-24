@@ -264,4 +264,4 @@ int button_click(wdw *wind_struct, sprites **ar, int start) {
 
 #### Instructions
 
-1. With all those func you should now be able to build a Setting and Menu page you can use the #define CONTINUE 48 #define LOOP 49 #define EXIT 50 #define ERROR 89 that are in my.h as return code.
+1. With all those functions, you should now be able to build a Settings and Menu page. You can use the #define CONTINUE 48, #define LOOP 49, #define EXIT 50, #define ERROR 89 that are in my.h as return codes.
