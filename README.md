@@ -131,7 +131,7 @@ text *create_text(char *string, sfVector2f pos, int size, sfColor color)
 
 ### Part 4: Creating Menu Sprites and Game Text
 
-In this step, we will create two functions: `game_sprites` and `create_game_text`  These functions will be responsible for initializing arrays of sprites and text objects using the previously defined `create_object` and `create_text` functions.
+In this step, we will create two functions: `game_sprites` and `game_text`  These functions will be responsible for initializing arrays of sprites and text objects using the previously defined `create_object` and `create_text` functions.
 
 #### Instructions
 
@@ -169,9 +169,9 @@ sprites **game_sprites(void)
 
 ### Part 4.2: Creating Game Text
 
-1. Open the `create_game_text.c` file.
+1. Open the `game_text.c` file.
 
-2. In `create_game_text.c`, you'll find a declaration for the `create_game_text` function with an empty body and an allocated array of text pointers using `malloc`. Your task is to fill in the function body to initialize the array with text objects.
+2. In `game_text.c`, you'll find a declaration for the `game_text` function with an empty body and an allocated array of text pointers using `malloc`. Your task is to fill in the function body to initialize the array with text objects.
 
 3. Initialize an array of pointers to `text` using `malloc`. Determine the length of the array (`len`) based on the number of text objects you want to create.
 
@@ -181,13 +181,13 @@ sprites **game_sprites(void)
 
 6. Return the array.
 
-#### Example Code for `create_game_text`
+#### Example Code for `game_text`
 
 ```c
 #include "my.h"
 #include "struct.h"
 
-text **create_game_text(void)
+text **game_text(void)
 {
     int len = 2;
     text **t = malloc(sizeof(*t) * len);
